@@ -13,7 +13,7 @@
 
 Данный блок следует за курсором и переключается при нажатии на "L"
 
-## Перемещение 'фонарика' за курсором
+### Перемещение 'фонарика' за курсором
 ```js
 function MoudeLight() {
   const light = document.querySelector(".light");
@@ -27,7 +27,7 @@ function MoudeLight() {
 }
 ```
 
-## Переключяение фонарика
+### Переключяение фонарика
 ```js
 function OffOnLight() {
   document.addEventListener('keydown', function(event) {
@@ -45,3 +45,5 @@ function OffOnLight() {
   });
 }
 ```
+---
+## Неон
