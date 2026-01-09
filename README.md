@@ -47,3 +47,11 @@ function OffOnLight() {
 ```
 ---
 ## Неон
+```html
+<div class="out neon-card">
+    <div class="inner">
+        /* Содержимое */
+    </div>
+</div>
+```
+Блок **out** с классом `neon-card` создает `::before` и `::after` для визульного барьера в стиле Neon
