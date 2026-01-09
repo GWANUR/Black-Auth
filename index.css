@@ -1,0 +1,279 @@
+:root {
+  --clr: #fff; /* Цвет неона */
+}
+body{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  overflow:hidden;
+}
+h1{
+  margin:0;
+    position: relative;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#back{
+    background: #121212;
+    box-shadow: inset 0 0 90px 20px #0a0a0a;
+  width:100%;
+  height:100%;
+}
+.light.active{
+  opacity:1;
+}
+.light{
+  opacity:0;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(#ffffff1f 0%, transparent 69%);
+    border-radius: 100%;
+    pointer-events: none;
+    position: absolute;
+    top: -280px;
+    left: 22%;
+  z-index:999999;
+}
+header {
+    position: fixed;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #cbcbcb;
+    top: 0;
+}
+#auth {
+  margin-top: 70px;
+  width: 70%;
+  max-width: 950px;
+  min-width: 810px;
+  height: 65%;
+  max-height: 572px;
+  min-height: 500px;
+  overflow: hidden;
+  padding: 37px;
+}
+#auth .out{
+  width: 100%;
+  height: 100%;
+  border-radius:20px;
+  box-shadow: 0 0 10px 2px black;
+}
+#auth .inner{
+      width: 100%;
+    height: 100%;
+  border-radius:20px;
+}
+svg.bi.bi-info-circle{
+    width: 20px;
+    height: 20px;
+}
+.info {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+  margin-left:10px;
+}
+.info h4 {
+    margin: 0;
+    position: absolute;
+    width: max-content;
+    padding: 5px 10px;
+    background: #393939;
+    left: 25px;
+    top: -35px;
+    border-radius: 10px 10px 10px 0px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.info svg:hover + h4{
+    opacity:1;
+  transition:0.3s;
+}
+
+
+.neon-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #000; /* Цвет фона блока */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Скрываем лишнее свечение */
+  border-radius: 10px;
+}
+
+/* Создаем вращающийся градиент */
+.neon-card.active::before {
+  opacity:1;
+  transition:.3s;
+}
+.neon-card::before {
+  opacity:0;
+  transition:.3s;
+  content: '';
+  position: absolute;
+  width: 250%;
+  height: 450%;
+  background: conic-gradient(#00f, #f0f, #00f); /* Цвета неона */
+  animation: rotate 4s linear infinite;
+}
+.neon-card::after {
+  content: '';
+  position: absolute;
+  inset: 4px; /* Толщина рамки */
+  background: #0a0a0a; /* Цвет внутри блока */
+  border-radius: inherit;
+}
+
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.inner{
+  display:flex;
+  z-index:11;
+}
+.login{
+  flex:1 0;
+  padding: 50px;
+}
+.register{
+  flex:1 0;
+  padding: 50px;
+}
+.input-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  color: #ffffff;
+  width: max-content;
+}
+.input-box input{
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  background: transparent;
+  color: #b3b3b3;
+  outline: none;
+  border-color: transparent;
+  border: solid 3px #5f5f5f;
+  z-index: 14;
+  transition:.2s;
+}
+.input-box label {
+  font-size: 22px;
+  margin: 0 0 -11px 20px;
+  z-index: 15;
+  pointer-events: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
+  background: #0a0a0a;
+  padding:0 15px;
+}
+
+.input-box input:focus{
+  border: solid 3px #c1c1c1;
+  transition:.2s;
+  color:#fff;
+}
+.input-box input:hover{
+  border: solid 3px #c1c1c1;
+  transition:.2s;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  height:100%;
+}
+.form .title {
+    font-size: 32px;
+    color: #fff;
+    padding-bottom: 8px;
+}
+button, .button{
+  font-size: 20px;
+  padding: 10px 35px;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #c3c3c3;
+  color: #252525;
+  cursor: pointer; 
+  margin-top: 10px;
+  transition: .3s;
+  border:none;
+}
+button:hover, .button:hover {
+  box-shadow: 0 0 11px 0px white;
+  transform: scale(1.05);
+  transition: .3s;
+}
+.die {
+  width: 50%;
+  height: 98.3%;
+  position: absolute;
+  border: solid 4px white;
+  border-radius: 20px;
+  background: #010101bd;
+  z-index: 20;
+  backdrop-filter: blur(15px);
+  color: #fff;
+  right: 0;
+  transform: translateX(0%);
+  transition: .4s;
+}
+.die.reg{
+  transform: translateX(-96.1%);
+}
+.action-login, .action-register{
+  padding: 30px;
+  height: calc(100% - 60px);
+  width: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  transition: .3s;
+  opacity:0;
+  z-index:20;
+}
+.action-login.active, .action-register.active{
+  transition: .3s;
+  opacity:1;
+}
+.action-login.active{  
+  z-index:21;
+  opacity:1;
+}
+.action-register.active{  
+  z-index:21;
+  opacity:1;
+}
+.action-register {
+  display: none; 
+}
+
+.action-login.active {
+  display: flex;
+}
