@@ -173,6 +173,18 @@ svg.bi.bi-info-circle{
   z-index: 14;
   transition:.2s;
 }
+.input-box input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #e8f3ff inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (prefers-color-scheme: dark) {
+    .input-box input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px rgb(35 35 35) inset !important;
+        -webkit-text-fill-color: #fff !important;
+    }
+}
 .input-box label {
   font-size: 22px;
   margin: 0 0 -11px 20px;
